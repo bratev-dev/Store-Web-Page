@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- Especifica el idioma del documento para accesibilidad y motores de búsqueda -->
+<html lang="es">
+
+<head>
+  <!-- Metadatos esenciales para el navegador -->
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Asegura que la página sea responsive y se vea bien en todos los dispositivos -->
+  <title>Tienda Don Teo</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Inclusión de la hoja de estilos de Bootstrap para el diseño base -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclusión de Font Awesome para los iconos (ej. redes sociales) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Hoja de estilos personalizada para sobrescribir o añadir estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Ícono de la página (favicon) que se muestra en la pestaña del navegador -->
+  <link rel="icon" href="images/mustache.png" type="images/mustache.png">
+  <!-- Inclusión de la librería Toastify para notificaciones emergentes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!-- Inclusión de scripts de JavaScript -->
+  <script src="validacion.js"></script> <!-- Script para la validación del formulario -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> <!-- Script de la librería Toastify -->
+</head>
+
+<body>
+
+  <!-- Encabezado principal del sitio web -->
+  <header>
+    <div class="container-fluid">
+      <div class="align-items-center">
+        <!-- Contenedor de la información de la tienda -->
+        <div class="store-info">
+          <!-- Logo de la tienda -->
+          <div class="store-logo">
+            <img src="images/mustache.png" alt="Logo de la Tienda Don Teo" width="100" height="100">
+          </div>
+          <!-- Nombre principal de la tienda -->
+          <h1>TIENDA DON TEO</h1>
+          <br>
+          <!-- Iconos de redes sociales con enlaces -->
+          <div class="social-icons">
+            <a href="https://web.facebook.com/marketplace/?ref=app_tab" target="_blank" title="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de navegación principal, se mantiene fija en la parte superior (sticky-top) -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <!-- Botón para expandir/colapsar el menú en dispositivos móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Contenido de la barra de navegación que se colapsa -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Lista de enlaces de navegación -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seccion1">Promociones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seccion2">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seccion3">Registro de productos</a>
+          </li>
+        </ul>
+        <!-- Logo que puede ser visible o no dependiendo de los estilos CSS -->
+        <img src="images/mustache.png" alt="Logo Don Teo en Navbar" id="logo-navbar">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Promociones -->
+  <div class="container-fluid mt-3" id="seccion1">
+    <h1>Promociones</h1>
+    <!-- Carrusel de Bootstrap para mostrar productos en oferta -->
+    <div id="carouselProductos" class="carousel carousel-fade mt-2 mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Primer elemento del carrusel (Arroz) -->
+        <div class="carousel-item active layout-reverse">
+          <div class="promo-content">
+            <!-- Columna para la imagen del producto -->
+            <div class="promo-image">
+              <img src="images/abarrotes/arroz.png" alt="Promo Arroz Florhuila">
+            </div>
+            <!-- Columna para los detalles de la promoción -->
+            <div class="promo-details">
+              <span class="badge-oferta">¡OFERTA!</span>
+              <h5 class="promo-title">Arroz Florhuila x1000g</h5>
+              <div class="promo-precios">
+                <span class="precio-antiguo">$5.200</span>
+                <span class="precio-nuevo">$4.700</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segundo elemento del carrusel (Listerine) -->
+        <div class="carousel-item layout-reverse">
+          <div class="promo-content">
+            <div class="promo-image">
+              <img src="images/aseo/listerine.png" alt="Promo Listerine">
+            </div>
+            <div class="promo-details">
+              <span class="badge-oferta">¡OFERTA!</span>
+              <h5 class="promo-title">Listerine Control Sarro</h5>
+              <div class="promo-precios">
+                <span class="precio-antiguo">$25.900</span>
+                <span class="precio-nuevo">$21.500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tercer elemento del carrusel (Fanta) -->
+        <div class="carousel-item layout-reverse">
+          <div class="promo-content">
+            <div class="promo-image">
+              <img src="images/bebidas/fanta.png" alt="Promo Fanta">
+            </div>
+            <div class="promo-details">
+              <span class="badge-oferta">20% DTO.</span>
+              <h5 class="promo-title">Gaseosa Fanta Naranja</h5>
+              <div class="promo-precios">
+                <span class="precio-antiguo">$4.500</span>
+                <span class="precio-nuevo">$3.600</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controles de navegación del carrusel (Anterior/Siguiente) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Sección de Productos -->
+  <div class="container-fluid" id="seccion2">
+    <h1>Productos</h1>
+    <div class="row mt-3">
+      <!-- Barra lateral con la lista de categorías de productos -->
+      <aside class="col-sm-2 col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item">Abarrotes</li>
+          <li class="list-group-item">Aseo</li>
+          <li class="list-group-item">Bebidas</li>
+          <li class="list-group-item">Frutas y verduras</li>
+          <li class="list-group-item">Lácteos</li>
+        </ul>
+      </aside>
+
+      <!-- Contenedor principal para mostrar los productos -->
+      <main class="col-sm-10 col-md-8">
+        <h2>Productos Destacados</h2>
+        <!-- Rejilla (grid) para organizar las tarjetas de productos -->
+        <div class="row g-3">
+          <!-- Tarjeta de Producto 1 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/arroz.png" class="card-img-top img-fluid" alt="Producto Arroz Florhuila">
+              <div class="card-body">
+                <h5 class="card-title">Arroz Florhuila x1000g</h5>
+                <p class="card-text">$4700.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Producto 2 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/frijol.png" class="card-img-top img-fluid" alt="Producto Frijol Cuisine&Co">
+              <div class="card-body">
+                <h5 class="card-title">Frijol Cuisine&Co x500g</h5>
+                <p class="card-text">$5390.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Producto 3 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/azucar.png" class="card-img-top img-fluid" alt="Producto Azúcar Riopaila">
+              <div class="card-body">
+                <h5 class="card-title">Azúcar Riopaila blanca x1000g</h5>
+                <p class="card-text">$5570.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Producto 4 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/aceite.png" class="card-img-top img-fluid" alt="Producto Aceite Riquísimo">
+              <div class="card-body">
+                <h5 class="card-title">Aceite Riquísimo x3000g</h5>
+                <p class="card-text">$35900.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Producto 5 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/pasta.png" class="card-img-top img-fluid" alt="Producto Pasta Doria Spaguetti">
+              <div class="card-body">
+                <h5 class="card-title">Pasta Doria Spaguetti x500g</h5>
+                <p class="card-text">$4310.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Producto 6 -->
+          <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border border-primary rounded">
+              <img src="images/abarrotes/sopa.png" class="card-img-top img-fluid"
+                alt="Producto Sopa Instantánea Ajinomen">
+              <div class="card-body">
+                <h5 class="card-title">Sopa Instantánea Ajinomen x80g</h5>
+                <p class="card-text">$3150.00</p>
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Sección para el registro de sugerencias de productos -->
+  <div class="container-fluid" id="seccion3">
+    <h2 class="text-center mt-3 mb-4">Danos sugerencias de productos nuevos aquí ⬇️</h2>
+    <p class="lead text-center">
+      Este formulario permite registrar una solicitud para que se agreguen nuevos productos a nuestra tienda.
+    </p>
+
+    <!-- Formulario de registro con validación a través de JavaScript -->
+    <form id="formularioRegistro" onsubmit="return validarFormulario()">
+
+      <!-- Campo para seleccionar el tipo de producto -->
+      <div class="mb-3">
+        <label for="tipoProducto" class="form-label">Tipo de Producto:</label>
+        <select id="tipoProducto" name="tipo-producto" class="form-select">
+          <option value="" disabled selected>Seleccione un tipo de producto</option>
+          <option value="abarrotes">Abarrotes</option>
+          <option value="aseo">Aseo</option>
+          <option value="FyV">Frutas y Verduras</option>
+          <option value="lacteos">Lácteos</option>
+        </select>
+        <!-- Etiqueta para mostrar mensajes de error de validación -->
+        <label class="text-danger form-text" id="errorTipoProducto"></label>
+      </div>
+
+      <!-- Campo para ingresar el nombre del producto -->
+      <div class="mb-3">
+        <label for="nombreProducto" class="form-label">Nombre del producto:</label>
+        <input type="text" id="nombreProducto" name="nombre-producto" class="form-control"
+          placeholder="Ej: Leche deslactosada">
+        <label class="text-danger form-text" id="errorNombres"></label>
+      </div>
+
+      <!-- Campo para seleccionar el origen del producto (Nacional/Importado) -->
+      <div class="mb-3">
+        <label class="form-label">Tipo de origen:</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="origen" id="origenNacional" value="nacional">
+          <label class="form-check-label" for="origenNacional">Nacional</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="origen" id="origenImportado" value="importado">
+          <label class="form-check-label" for="origenImportado">Importado</label>
+        </div>
+        <label class="text-danger form-text" id="errorOrigen"></label>
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <div class="d-flex justify-content-start">
+        <button type="submit" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Pie de página -->
+  <div class="container-fluid mt-3 my-5">
+    <footer class="text-center text-lg-start" style="background-color: #160a711c;">
+      <!-- Contenedor para los botones de redes sociales -->
+      <div class="container d-flex justify-content-center py-5">
+        <a href="https://web.facebook.com/marketplace/?ref=app_tab" target="_blank"
+          class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: transparent;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="btn btn-primary btn-lg btn-floating mx-2"
+          style="background-color: transparent;">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+
+      <!-- Sección de Copyright -->
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="https://www.unicauca.edu.co/">Universidad del Cauca</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts de JavaScript al final del body para una carga más rápida de la página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Inclusión de la librería AOS (Animate On Scroll) para animaciones al hacer scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Inicialización de la librería AOS -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
